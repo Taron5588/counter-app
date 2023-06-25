@@ -19,7 +19,15 @@ function Counter() {
 
   return (
     <div className="App">
-      start
+      <h1>Counter App</h1>
+      <p>Count: {count}</p>
+      <div>
+        <button onClick={increase}>Increase</button>
+        <button onClick={decrease} disabled={count <= minValue}>
+          Decrease
+        </button>
+        <button onClick={reset}>Reset</button>
+      </div>
     </div>
   );
 }
