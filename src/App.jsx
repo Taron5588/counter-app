@@ -4,7 +4,7 @@ import './App.css';
 function Counter() {
 
   const [count, setCount] = useState(0);
-  const [maxValue, setMaxValue] = useState(20);
+  const [maxValue, setMaxValue] = useState(19);
   const [minValue, setMinValue] = useState(0);
   const [step, setStep] = useState(1)
 
@@ -27,6 +27,16 @@ function Counter() {
           Decrease
         </button>
         <button onClick={reset}>Reset</button>
+      </div>
+      <div>
+        <label>
+          Max Value:
+          <input
+            type="number"
+            value={maxValue}
+            onChange={(e) => setMaxValue(e.target.value)}
+          />
+        </label>
       </div>
     </div>
   );
