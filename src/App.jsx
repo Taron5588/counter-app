@@ -9,16 +9,11 @@ function Counter() {
   const [step, setStep] = useState(1)
 
   const increase = () => { if (count < maxValue) { setCount(count + step);}};
-
   const decrease = () => {if (count > minValue) {setCount(count - step);}};
-
   const reset = () => {setCount(0);};
 
-
-
-
   return (
-    <div className="App">
+    <div className="counter-container">
       <h1>Counter App</h1>
       <p>Count: {count}</p>
       <div>
@@ -28,13 +23,15 @@ function Counter() {
         </button>
         <button onClick={reset}>Reset</button>
       </div>
-      <div>
+
+      <div className='input-container'>
+       <div>
         <label>
           Max Value:
           <input
             type="number"
             value={maxValue}
-            onChange={(e) => setMaxValue(e.target.value)}
+            onChange={(e) => setMaxValue(Number(e.target.value))}
           />
         </label>
       </div>
@@ -44,7 +41,7 @@ function Counter() {
           <input
             type="number"
             value={minValue}
-            onChange={(e) => setMinValue(e.target.value)}
+            onChange={(e) => setMinValue(Number(e.target.value))}
           />
         </label>
       </div>
@@ -54,11 +51,11 @@ function Counter() {
           <input
             type="number"
             value={step}
-            onChange={(e) => setStep(e.target.value)}
+            onChange={(e) => setStep(Number(e.target.value))}
           />
         </label>
       </div>
-
+     </div>
     </div>
   );
 }
