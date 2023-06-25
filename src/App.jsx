@@ -48,6 +48,17 @@ function Counter() {
           />
         </label>
       </div>
+      <div>
+        <label>
+          Step:
+          <input
+            type="number"
+            value={step}
+            onChange={(e) => setStep(e.target.value)}
+          />
+        </label>
+      </div>
+
     </div>
   );
 }
