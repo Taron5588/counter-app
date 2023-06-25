@@ -2,3 +2,8 @@
   align-items: start;
 }
 
+#input-container {
+  
+  align-items: flex-start;
+  color: blue;
+}

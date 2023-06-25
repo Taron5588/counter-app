@@ -4,12 +4,12 @@ import './App.css';
 function Counter() {
 
   const [count, setCount] = useState(0);
-  const [maxValue, setMaxValue] = useState(19);
+  const [maxValue, setMaxValue] = useState(20);
   const [minValue, setMinValue] = useState(0);
   const [step, setStep] = useState(1)
 
-  const increase = () => { if (count < maxValue) { setCount(count + step);}};
-  const decrease = () => {if (count > minValue) {setCount(count - step);}};
+  const increase = () => { if (count <= maxValue-step) { setCount(count + step);}};
+  const decrease = () => {if (count >= minValue+step) {setCount(count - step);}};
   const reset = () => {setCount(0);};
 
   return (
@@ -24,7 +24,7 @@ function Counter() {
         <button onClick={reset}>Reset</button>
       </div>
 
-      <div className='input-container'>
+      <div id='input-container'>
        <div>
         <label>
           Max Value:
