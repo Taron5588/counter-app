@@ -38,6 +38,16 @@ function Counter() {
           />
         </label>
       </div>
+      <div>
+        <label>
+          Min Value:
+          <input
+            type="number"
+            value={minValue}
+            onChange={(e) => setMinValue(e.target.value)}
+          />
+        </label>
+      </div>
     </div>
   );
 }
