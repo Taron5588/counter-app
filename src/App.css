@@ -2,8 +2,15 @@
   align-items: start;
 }
 
+.counter-container {
+  align-content: end;
+  align-self: flex-end;
+  display: contents;
+  color: brown;
+  text-align-last: start;
+}
+
 #input-container {
-  
   align-items: flex-start;
   color: blue;
 }
